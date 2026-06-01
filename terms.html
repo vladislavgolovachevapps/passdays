@@ -7,7 +7,8 @@
 <link rel="alternate" hreflang="en" href="terms">
 <link rel="alternate" hreflang="ru" href="ru/terms">
 <link rel="stylesheet" href="style.css">
-<script>(function(){try{var t=localStorage.getItem("passdays_theme");if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
+<meta name="theme-color" content="#fdf7ee">
+<script>(function(){try{var d=localStorage.getItem("passdays_theme")==="dark";if(d)document.documentElement.setAttribute("data-theme","dark");var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",d?"#000000":"#fdf7ee");}catch(e){}})();</script>
 </head>
 <body>
 
@@ -17,9 +18,24 @@
     PassDays
   </a>
   <span class="nav-right">
-    <span class="lang-switch">
-      <a href="terms" class="active" data-set-lang="en">EN</a>
-      <a href="ru/terms" data-set-lang="ru">RU</a>
+    <span class="lang-menu" data-open="false">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language"><span class="globe">🌐</span> English <span class="chev">▾</span></button>
+      <div class="lang-pop" role="menu">
+        <a class="active" href="/terms" hreflang="en" data-set-lang="en">English</a>
+        <a href="/ru/terms" hreflang="ru" data-set-lang="ru">Русский</a>
+        <a href="/de/terms" hreflang="de" data-set-lang="de">Deutsch</a>
+        <a href="/es/terms" hreflang="es" data-set-lang="es">Español</a>
+        <a href="/fr/terms" hreflang="fr" data-set-lang="fr">Français</a>
+        <a href="/it/terms" hreflang="it" data-set-lang="it">Italiano</a>
+        <a href="/pl/terms" hreflang="pl" data-set-lang="pl">Polski</a>
+        <a href="/pt-BR/terms" hreflang="pt-BR" data-set-lang="pt-BR">Português (BR)</a>
+        <a href="/be/terms" hreflang="be" data-set-lang="be">Беларуская</a>
+        <a href="/uk/terms" hreflang="uk" data-set-lang="uk">Українська</a>
+        <a href="/ja/terms" hreflang="ja" data-set-lang="ja">日本語</a>
+        <a href="/ko/terms" hreflang="ko" data-set-lang="ko">한국어</a>
+        <a href="/kk/terms" hreflang="kk" data-set-lang="kk">Қазақша</a>
+        <a href="/tr/terms" hreflang="tr" data-set-lang="tr">Türkçe</a>
+      </div>
     </span>
     <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false"><span class="t-moon">🌙</span><span class="t-sun">☀️</span></button>
   </span>

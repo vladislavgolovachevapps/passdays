@@ -10,11 +10,17 @@
   //    a flash; here we just wire the toggle button and enable transitions.
   var THEME_KEY = "passdays_theme";
   function applyTheme(t) {
-    if (t === "dark") {
+    var dark = t === "dark";
+    if (dark) {
       document.documentElement.setAttribute("data-theme", "dark");
     } else {
       document.documentElement.removeAttribute("data-theme");
     }
+    // Keep the mobile browser chrome / status-bar tint in sync with the theme.
+    // Without this, the top strip keeps the previous theme's color until a full
+    // re-render (e.g. rotating the device).
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) { meta.setAttribute("content", dark ? "#000000" : "#fdf7ee"); }
   }
   // Enable smooth color transitions only after first paint (no load flash).
   // Use rAF when the tab is visible; fall back to a timeout so the class is
@@ -53,11 +59,36 @@
     try { return localStorage.getItem(KEY); } catch (e) { return null; }
   }
 
-  // 1) Remember the language whenever the user clicks the switch.
+  // 1) Remember the language whenever the user picks one from the menu.
   var switches = document.querySelectorAll("[data-set-lang]");
   for (var i = 0; i < switches.length; i++) {
     switches[i].addEventListener("click", function () {
       store(this.getAttribute("data-set-lang"));
+    });
+  }
+
+  // 1b) Language popup menu: open/close behaviour.
+  var langMenu = document.querySelector(".lang-menu");
+  if (langMenu) {
+    var langTrigger = langMenu.querySelector(".lang-trigger");
+    function setMenu(open) {
+      langMenu.setAttribute("data-open", String(open));
+      langTrigger.setAttribute("aria-expanded", String(open));
+    }
+    langTrigger.addEventListener("click", function (e) {
+      e.stopPropagation();
+      setMenu(langMenu.getAttribute("data-open") !== "true");
+    });
+    // Click outside closes it.
+    document.addEventListener("click", function (e) {
+      if (!langMenu.contains(e.target)) { setMenu(false); }
+    });
+    // Escape closes it and returns focus to the trigger.
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && langMenu.getAttribute("data-open") === "true") {
+        setMenu(false);
+        langTrigger.focus();
+      }
     });
   }
 

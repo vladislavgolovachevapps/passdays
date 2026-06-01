@@ -7,7 +7,8 @@
 <link rel="alternate" hreflang="en" href="../privacy">
 <link rel="alternate" hreflang="ru" href="privacy">
 <link rel="stylesheet" href="../style.css">
-<script>(function(){try{var t=localStorage.getItem("passdays_theme");if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
+<meta name="theme-color" content="#fdf7ee">
+<script>(function(){try{var d=localStorage.getItem("passdays_theme")==="dark";if(d)document.documentElement.setAttribute("data-theme","dark");var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",d?"#000000":"#fdf7ee");}catch(e){}})();</script>
 </head>
 <body>
 
@@ -17,9 +18,24 @@
     PassDays
   </a>
   <span class="nav-right">
-    <span class="lang-switch">
-      <a href="../privacy" data-set-lang="en">EN</a>
-      <a href="privacy" class="active" data-set-lang="ru">RU</a>
+    <span class="lang-menu" data-open="false">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Изменить язык"><span class="globe">🌐</span> Русский <span class="chev">▾</span></button>
+      <div class="lang-pop" role="menu">
+        <a href="/privacy" hreflang="en" data-set-lang="en">English</a>
+        <a class="active" href="/ru/privacy" hreflang="ru" data-set-lang="ru">Русский</a>
+        <a href="/de/privacy" hreflang="de" data-set-lang="de">Deutsch</a>
+        <a href="/es/privacy" hreflang="es" data-set-lang="es">Español</a>
+        <a href="/fr/privacy" hreflang="fr" data-set-lang="fr">Français</a>
+        <a href="/it/privacy" hreflang="it" data-set-lang="it">Italiano</a>
+        <a href="/pl/privacy" hreflang="pl" data-set-lang="pl">Polski</a>
+        <a href="/pt-BR/privacy" hreflang="pt-BR" data-set-lang="pt-BR">Português (BR)</a>
+        <a href="/be/privacy" hreflang="be" data-set-lang="be">Беларуская</a>
+        <a href="/uk/privacy" hreflang="uk" data-set-lang="uk">Українська</a>
+        <a href="/ja/privacy" hreflang="ja" data-set-lang="ja">日本語</a>
+        <a href="/ko/privacy" hreflang="ko" data-set-lang="ko">한국어</a>
+        <a href="/kk/privacy" hreflang="kk" data-set-lang="kk">Қазақша</a>
+        <a href="/tr/privacy" hreflang="tr" data-set-lang="tr">Türkçe</a>
+      </div>
     </span>
     <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Переключить тёмную тему" aria-pressed="false"><span class="t-moon">🌙</span><span class="t-sun">☀️</span></button>
   </span>
