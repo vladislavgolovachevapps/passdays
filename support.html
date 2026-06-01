@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PassDays — Support</title>
+<meta name="description" content="Get help with PassDays. Contact support, send us a message, or read answers to common questions.">
+<link rel="alternate" hreflang="en" href="support">
+<link rel="alternate" hreflang="ru" href="support-ru">
+<link rel="stylesheet" href="style.css">
+<script>(function(){try{var t=localStorage.getItem("passdays_theme");if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href=".">
+    <img src="appicon.png" alt="PassDays icon">
+    PassDays
+  </a>
+  <span class="nav-right">
+    <a class="nav-link" href=".">Home</a>
+    <span class="lang-switch">
+      <a href="support" class="active" data-set-lang="en">EN</a>
+      <a href="support-ru" data-set-lang="ru">RU</a>
+    </span>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false"><span class="t-moon">🌙</span><span class="t-sun">☀️</span></button>
+  </span>
+</nav>
+
+<main class="content">
+
+<h1>Support</h1>
+<p class="meta">PassDays — we're happy to help</p>
+
+<p class="support-intro">Have a question, found a bug, or want to suggest a feature? Send us a message below, or email us directly — we read every message and usually reply within a couple of days.</p>
+
+<div class="contact-card">
+  <span class="ic">✉️</span>
+  <span class="ct">
+    <strong>Email us directly</strong>
+    <a href="mailto:vladislavgolovachevsupport@gmail.com">vladislavgolovachevsupport@gmail.com</a>
+  </span>
+</div>
+
+<h2>Send a message</h2>
+
+<!-- Posts to Web3Forms (free form-to-email service). Replace the access_key
+     value below with your own key from https://web3forms.com (free, no account
+     needed — enter your email, copy the key). Until then the form shows a
+     "not configured" notice instead of failing silently. -->
+<form id="contact-form" class="contact-form"
+      action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_KEY">
+  <input type="hidden" name="subject" value="New PassDays support message">
+  <input type="hidden" name="from_name" value="PassDays Support Form">
+
+  <div class="field">
+    <label for="cf-name">Your name</label>
+    <input id="cf-name" type="text" name="name" autocomplete="name" placeholder="Jane Traveler">
+  </div>
+
+  <div class="field">
+    <label for="cf-email">Your email</label>
+    <input id="cf-email" type="email" name="email" autocomplete="email" required placeholder="you@example.com">
+  </div>
+
+  <div class="field">
+    <label for="cf-message">Message</label>
+    <textarea id="cf-message" name="message" required placeholder="How can we help?"></textarea>
+  </div>
+
+  <!-- Honeypot: hidden from people, bots fill it and get rejected -->
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+  <button type="submit" class="btn-send">Send message</button>
+  <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+</form>
+
+<h2>Frequently asked</h2>
+
+<h3>How does PassDays count my days?</h3>
+<p>You can log trips manually, import them from your photos or a CSV file, or let PassDays auto-detect the country you're in from your location. It then calculates your days against each limit or residency target you've set up. An optional count-by-night mode counts the nights you actually stayed, matching how many tax and residency rules define presence.</p>
+
+<h3>Is my travel data private?</h3>
+<p>Your trips, limits, and preferences live on your device. There's no account and no sign-in, and we don't sell your data. See our <a href="privacy">Privacy Policy</a> for the full details, including optional iCloud sync and analytics.</p>
+
+<h3>How do I manage or cancel my subscription?</h3>
+<p>Subscriptions are handled by Apple. Open <em>Settings → [your Apple ID] → Subscriptions</em> on your device to review, change, or cancel. Deleting the app does not cancel a subscription.</p>
+
+<h3>I think a day count looks wrong.</h3>
+<p>Send us a message above with the country and dates involved and we'll take a look. PassDays is a personal tracking tool, so it's always worth confirming important dates with official sources too.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="foot-links">
+    <a href="privacy">Privacy Policy</a>
+    <a href="terms">Terms of Use</a>
+    <a href="support">Support</a>
+    <a href="mailto:vladislavgolovachevsupport@gmail.com">Contact</a>
+  </div>
+  <p class="foot-meta">© 2026 Vladislav Golovachev. All rights reserved.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
