@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PassDays — Privacy Policy</title>
 <link rel="alternate" hreflang="en" href="privacy">
-<link rel="alternate" hreflang="ru" href="privacy-ru">
+<link rel="alternate" hreflang="ru" href="ru/privacy">
 <link rel="stylesheet" href="style.css">
 <script>(function(){try{var t=localStorage.getItem("passdays_theme");if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
 </head>
@@ -17,10 +17,9 @@
     PassDays
   </a>
   <span class="nav-right">
-    <a class="nav-link" href=".">Home</a>
     <span class="lang-switch">
       <a href="privacy" class="active" data-set-lang="en">EN</a>
-      <a href="privacy-ru" data-set-lang="ru">RU</a>
+      <a href="ru/privacy" data-set-lang="ru">RU</a>
     </span>
     <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false"><span class="t-moon">🌙</span><span class="t-sun">☀️</span></button>
   </span>
@@ -29,7 +28,7 @@
 <main class="content">
 
 <h1>Privacy Policy</h1>
-<p class="meta">PassDays — last updated May 12, 2026</p>
+<p class="meta">PassDays — last updated June 2, 2026</p>
 
 <p>This policy explains what information PassDays ("we", "us", or "the App") handles when you use the app, how it is used, and the controls you have. PassDays is developed by Vladislav Golovachev as an individual developer.</p>
 
@@ -47,8 +46,10 @@
 
 <h2>2. Permissions PassDays requests</h2>
 
-<h3>Location (While Using the App)</h3>
+<h3>Location</h3>
 <p>If you grant location access, PassDays uses your current GPS coordinates while the app is open to display your current country on the map and, if you enable the auto-detect feature, to add today's country to your travel log automatically. Coordinates are processed on-device. Only the country code inferred from those coordinates is saved into your travel log — the precise coordinates are not stored.</p>
+
+<p><strong>Background location (optional, "Always" permission):</strong> If you enable background auto-detect and grant "Always" access, PassDays uses Significant Location Changes to keep your travel calendar accurate even when the app is closed. As with foreground use, coordinates are processed on-device and only the country is saved — precise coordinates are not stored. You can switch back to "While Using" or turn location off anytime in iOS Settings.</p>
 
 <h3>Photo Library</h3>
 <p>If you grant photo library access and start a photo import, PassDays reads the <em>creation date</em> and <em>GPS coordinates</em> embedded in the metadata of your photos. The photos themselves are never uploaded or copied. Only the date and the country code inferred from the coordinates are saved into your travel log on this device. Reverse-geocoding of coordinates into country names is performed by Apple's CLGeocoder service on Apple servers.</p>
@@ -68,7 +69,9 @@
 <p>PassDays uses two services provided by Google (Firebase) to understand how the App is used and to catch crashes:</p>
 
 <ul>
-  <li><strong>Firebase Analytics</strong> — automatically collects events such as first launch, daily app opens, app version, operating system version, device model, and approximate country or region. This helps us understand how many people use the App and which features are useful. Data is aggregated and is not used to personally identify you.</li>
+  <li><strong>Firebase Analytics</strong> — automatically collects events such as first launch, daily app opens, app version, operating system version, device model, and approximate country or region. This helps us understand how many people use the App and which features are useful. Data is aggregated and is not used to personally identify you.
+    <p>In addition to automatic events, PassDays logs a small set of custom, non-identifying usage events — such as which screens you open, completing onboarding, creating a limit, importing data, or exporting a file — plus three on/off settings flags (auto-detect, count-by-night, iCloud sync). These are aggregated to show which features get used and are not used to identify you.</p>
+  </li>
   <li><strong>Firebase Crashlytics</strong> — captures information about crashes (stack trace, OS version, device model, app version) so bugs can be fixed. Crash reports do not contain your trips, photos, or location.</li>
 </ul>
 
@@ -81,6 +84,8 @@
 <p>PassDays offers optional auto-renewing subscriptions (PassDays Premium, monthly and yearly tiers). All payments are processed by Apple through your App Store account. We do not see or store your payment details. Apple shares with us only an anonymous purchase verification so the App knows whether your subscription is active.</p>
 
 <p>Subscriptions renew automatically until you cancel. You can review, cancel, or change subscriptions at any time in <em>Settings → [your Apple ID] → Subscriptions</em> on your device.</p>
+
+<p>To manage subscriptions, show offers, validate purchases, and run pricing experiments, PassDays uses Adapty, a subscription-management service. Adapty receives your purchase and subscription status and an anonymous, app-generated identifier; it does not receive your name, email, or Apple ID. See Adapty's privacy policy at <a href="https://adapty.io/privacy/">adapty.io/privacy</a>.</p>
 
 <h2>6. Data retention and deletion</h2>
 
@@ -117,7 +122,7 @@
 
 <h2>9. Security</h2>
 
-<p>Data stored on your device is protected by iOS file-system encryption when your device is locked. Communication with Apple's iCloud, Apple's CLGeocoder, and Google's Firebase services occurs over HTTPS using standard TLS encryption.</p>
+<p>Data stored on your device is protected by iOS file-system encryption when your device is locked. Communication with Apple's iCloud, Apple's CLGeocoder, Google's Firebase, and Adapty services occurs over HTTPS using standard TLS encryption.</p>
 
 <h2>10. Changes to this policy</h2>
 
@@ -125,7 +130,7 @@
 
 <h2>11. Contact</h2>
 
-<p>If you have questions or requests about this policy, email <a href="mailto:vladislavgolovachevsupport@gmail.com">vladislavgolovachevsupport@gmail.com</a>.</p>
+<p>If you have questions or requests about this policy, email <a href="mailto:vladislavgolovachevsupport@gmail.com?subject=PassDays%20Support">vladislavgolovachevsupport@gmail.com</a>.</p>
 
 </main>
 
@@ -134,7 +139,7 @@
     <a href="privacy">Privacy Policy</a>
     <a href="terms">Terms of Use</a>
     <a href="support">Support</a>
-    <a href="mailto:vladislavgolovachevsupport@gmail.com">Contact</a>
+    <a href="mailto:vladislavgolovachevsupport@gmail.com?subject=PassDays%20Support">Contact</a>
   </div>
   <p class="foot-meta">© 2026 Vladislav Golovachev. All rights reserved.</p>
 </footer>

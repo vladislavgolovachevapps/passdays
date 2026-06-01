@@ -40,14 +40,13 @@
 
 html {
   scroll-behavior: smooth;
-  /* Background lives on the root element so the overscroll / rubber-band
-     area is filled too (no white flash when you bounce past the bounds).
-     Solid color = fallback that the browser stretches into the bounce zone;
-     the fixed gradient paints the visible page. */
+  /* Solid themed color on the root so the overscroll / rubber-band area
+     (top AND bottom) is always filled with the theme color — never a light
+     flash. We do NOT use background-attachment: fixed here, because a fixed
+     gradient is anchored to the viewport and leaves the overscroll zone
+     unpainted (which exposed a light strip in dark mode). The visible
+     gradient lives on <body> instead. */
   background-color: var(--bg-bottom);
-  background-image: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 
 body {
@@ -56,7 +55,10 @@ body {
   min-height: 100vh;
   color: var(--text);
   line-height: 1.6;
-  background: transparent;
+  /* Gradient paints the page; fixed keeps it stable while scrolling. The root's
+     solid background-color (above) covers any overscroll beyond the body. */
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%) fixed;
+  background-color: var(--bg-bottom);
 }
 
 a { color: var(--link); }
@@ -122,33 +124,6 @@ button:focus-visible {
   align-items: center;
   gap: 18px;
 }
-
-.nav-link {
-  position: relative;
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95em;
-  padding: 4px 2px;
-  opacity: 0.82;
-  transition: opacity 0.18s ease, transform 0.18s ease;
-}
-.nav-link:hover { opacity: 1; }
-.nav-link:active { transform: scale(0.93); }
-/* Accent underline that grows from the center on hover */
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  border-radius: 2px;
-  background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
-  transform: translateX(-50%);
-  transition: width 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-.nav-link:hover::after { width: 100%; }
 
 /* Language switch */
 .lang-switch {
@@ -362,10 +337,11 @@ body.theme-ready .foot-links a {
   border: 1px solid var(--surface-border);
   text-align: left;
   /* Not a link / not tappable — purely informational. No pointer cursor,
-     no press feedback; it grows on hover for a tactile feel. */
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
-              box-shadow 0.35s ease,
-              border-color 0.35s ease;
+     no press feedback; it grows on hover for a tactile feel. Slow, relaxed
+     easing for a premium feel. */
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.6s ease,
+              border-color 0.6s ease;
 }
 .feature:hover {
   transform: scale(1.05);
@@ -376,7 +352,7 @@ body.theme-ready .foot-links a {
   font-size: 1.7em;
   line-height: 1;
   display: inline-block;
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .feature:hover .ic { transform: scale(1.15) rotate(-6deg); }
 .feature h3 { margin: 12px 0 6px; font-size: 1.05em; }
@@ -424,7 +400,7 @@ body.theme-ready .foot-links a {
 }
 .foot-meta a { color: var(--text-muted); }
 
-/* ---------- Support page: contact cards + form ---------- */
+/* ---------- Support page: contact card ---------- */
 .support-intro {
   margin: 0 0 8px;
   color: var(--text-muted);
@@ -453,81 +429,6 @@ body.theme-ready .foot-links a {
 .contact-card .ct strong { display: block; }
 .contact-card .ct a { font-weight: 500; }
 
-/* The form itself */
-.contact-form {
-  margin: 8px 0 0;
-  display: grid;
-  gap: 14px;
-}
-.contact-form .field { display: grid; gap: 6px; }
-.contact-form label {
-  font-size: 0.9em;
-  font-weight: 600;
-  color: var(--text);
-}
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  font: inherit;
-  color: var(--text);
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--surface-border);
-  background: var(--surface);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
-}
-.contact-form textarea { min-height: 140px; resize: vertical; }
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--accent-start);
-  box-shadow: 0 0 0 3px rgba(255, 138, 0, 0.18);
-}
-/* Honeypot — hidden from humans, catches bots */
-.contact-form .hp {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-/* Submit button — accent gradient, springy press */
-.btn-send {
-  justify-self: start;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 26px;
-  font: inherit;
-  font-weight: 600;
-  color: #3a2400;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
-  box-shadow: 0 4px 14px rgba(255, 138, 0, 0.32);
-  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, opacity 0.2s ease;
-}
-.btn-send:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 22px rgba(255, 138, 0, 0.4); }
-.btn-send:active { transform: translateY(0) scale(0.96); }
-.btn-send[disabled] { opacity: 0.6; cursor: default; transform: none; box-shadow: none; }
-
-/* Inline status message under the form */
-.form-status {
-  margin: 4px 0 0;
-  padding: 0;
-  font-size: 0.95em;
-  min-height: 1.2em;
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.form-status.show { opacity: 1; transform: translateY(0); }
-.form-status.ok { color: #1c7d3f; }
-.form-status.err { color: #c0392b; }
-:root[data-theme="dark"] .form-status.ok { color: #46d17e; }
-:root[data-theme="dark"] .form-status.err { color: #ff6b5e; }
 
 /* ---------- Entrance animations ---------- */
 

@@ -73,74 +73,7 @@
     }
   }
 
-  // 3) Contact form (support page) → Web3Forms, no page reload.
-  //    Static-site friendly: the form POSTs to Web3Forms, which emails the
-  //    submission to us. No backend of our own. Falls back to a normal POST
-  //    (and the plain mailto: link on the page) if JavaScript is unavailable.
-  var form = document.getElementById("contact-form");
-  if (form) {
-    var status = document.getElementById("form-status");
-    var lang = document.documentElement.lang === "ru" ? "ru" : "en";
-    var T = {
-      en: {
-        sending: "Sending…",
-        ok: "Thanks! Your message has been sent — we'll reply by email.",
-        err: "Something went wrong. Please email us directly at vladislavgolovachevsupport@gmail.com.",
-        nokey: "The form isn't configured yet. Please email vladislavgolovachevsupport@gmail.com."
-      },
-      ru: {
-        sending: "Отправка…",
-        ok: "Спасибо! Ваше сообщение отправлено — мы ответим по электронной почте.",
-        err: "Что-то пошло не так. Напишите нам напрямую на vladislavgolovachevsupport@gmail.com.",
-        nokey: "Форма ещё не настроена. Напишите на vladislavgolovachevsupport@gmail.com."
-      }
-    }[lang];
-
-    function setStatus(msg, kind) {
-      status.textContent = msg;
-      status.className = "form-status show " + kind;
-    }
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      var btn = form.querySelector(".btn-send");
-      var data = Object.fromEntries(new FormData(form).entries());
-
-      // Guard: refuse to submit with the unconfigured placeholder key.
-      if (!data.access_key || data.access_key.indexOf("REPLACE_WITH") === 0) {
-        setStatus(T.nokey, "err");
-        return;
-      }
-
-      var original = btn.textContent;
-      btn.disabled = true;
-      btn.textContent = T.sending;
-      setStatus(T.sending, "ok");
-
-      fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify(data)
-      })
-        .then(function (r) { return r.json(); })
-        .then(function (json) {
-          if (json.success) {
-            form.reset();
-            setStatus(T.ok, "ok");
-          } else {
-            setStatus(T.err, "err");
-          }
-        })
-        .catch(function () { setStatus(T.err, "err"); })
-        .then(function () {
-          btn.disabled = false;
-          btn.textContent = original;
-        });
-    });
-  }
-
-  // 4) Scroll-reveal for landing sections.
+  // 3) Scroll-reveal for landing sections.
   //    Progressive enhancement: classes are added by JS, so visitors without
   //    JavaScript (or with reduced-motion) always see fully visible content.
   var reduceMotion = window.matchMedia &&
