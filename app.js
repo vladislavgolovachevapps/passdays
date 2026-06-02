@@ -49,7 +49,10 @@
   }
 
   var KEY = "passdays_lang";
-  var current = document.documentElement.lang === "ru" ? "ru" : "en";
+  // The page's actual language (e.g. "en", "ru", "de", "pt-BR"). Must reflect
+  // every language — using an en/ru-only check here caused an infinite reload
+  // loop on the other 12 language pages.
+  var current = document.documentElement.lang || "en";
 
   function store(lang) {
     try { localStorage.setItem(KEY, lang); } catch (e) { /* private mode */ }
@@ -93,12 +96,13 @@
   }
 
   // 2) On load, honour a previously chosen language site-wide.
-  //    If the visitor preferred RU but landed on an EN page (e.g. a shared
-  //    link or the App Store privacy URL), send them to the RU counterpart.
+  //    If the visitor landed on a page in a different language than the one
+  //    they previously chose, send them to the matching alternate — but ONLY
+  //    if that alternate is a genuinely different URL (guard against loops).
   var pref = read();
   if (pref && pref !== current) {
     var alt = document.querySelector('link[rel="alternate"][hreflang="' + pref + '"]');
-    if (alt && alt.href) {
+    if (alt && alt.href && alt.href !== window.location.href) {
       window.location.replace(alt.href);
       return; // we're navigating away; skip reveal setup
     }
