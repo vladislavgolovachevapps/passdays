@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PassDays — Ülke Gün Takipçisi</title>
+<meta name="description" content="PassDays, her ülkede geçirdiğiniz günleri takip eder ve Schengen 90/180, vergi mukimliği ve özel vize limitlerini otomatik olarak hesaplar.">
+<link rel="alternate" hreflang="en" href="..">
+<link rel="alternate" hreflang="tr" href="." />
+<link rel="stylesheet" href="../style.css">
+<meta name="theme-color" content="#fdf7ee">
+<script>(function(){try{var d=localStorage.getItem("passdays_theme")==="dark";if(d)document.documentElement.setAttribute("data-theme","dark");var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",d?"#000000":"#fdf7ee");}catch(e){}})();</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href=".">
+    <img src="../appicon.png" alt="PassDays simgesi">
+    PassDays
+  </a>
+  <span class="nav-right">
+    <span class="lang-menu" data-open="false">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Dili değiştir"><span class="globe">🌐</span> Türkçe <span class="chev">▾</span></button>
+      <div class="lang-pop" role="menu">
+        <a href="/" hreflang="en" data-set-lang="en">English</a>
+        <a href="/ru/" hreflang="ru" data-set-lang="ru">Русский</a>
+        <a href="/de/" hreflang="de" data-set-lang="de">Deutsch</a>
+        <a href="/es/" hreflang="es" data-set-lang="es">Español</a>
+        <a href="/fr/" hreflang="fr" data-set-lang="fr">Français</a>
+        <a href="/it/" hreflang="it" data-set-lang="it">Italiano</a>
+        <a href="/pl/" hreflang="pl" data-set-lang="pl">Polski</a>
+        <a href="/pt-BR/" hreflang="pt-BR" data-set-lang="pt-BR">Português (BR)</a>
+        <a href="/be/" hreflang="be" data-set-lang="be">Беларуская</a>
+        <a href="/uk/" hreflang="uk" data-set-lang="uk">Українська</a>
+        <a href="/ja/" hreflang="ja" data-set-lang="ja">日本語</a>
+        <a href="/ko/" hreflang="ko" data-set-lang="ko">한국어</a>
+        <a href="/kk/" hreflang="kk" data-set-lang="kk">Қазақша</a>
+        <a class="active" href="/tr/" hreflang="tr" data-set-lang="tr">Türkçe</a>
+      </div>
+    </span>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Karanlık modu değiştir" aria-pressed="false"><span class="t-moon">🌙</span><span class="t-sun">☀️</span></button>
+  </span>
+</nav>
+
+<header class="hero">
+  <img class="hero-icon" src="../appicon.png" alt="PassDays app icon">
+  <p class="kicker">Ülke Gün Takipçisi</p>
+  <h1>PassDays</h1>
+  <p class="lede">Her ülkede tam olarak kaç gün geçirdiğinizi bilin. Schengen, vergi mukimliği ve vize limitlerinizi elektronik tablo olmadan kontrol altında tutun.</p>
+</header>
+
+<section class="section-head">
+  <h2>Takip ettiğiniz her şey, tek bir uygulamada</h2>
+  <p>Dağınık seyahatlerinizi nerede bulunduğunuzun ve durumunuzun net bir resmine dönüştüren altı ekran.</p>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <div class="ic">✈️</div>
+    <h3>Limitler</h3>
+    <p>Schengen 90/180, Japonya, ABD, Birleşik Krallık ve daha fazlası — bir limite ulaşmadan önce kaç gününüz kaldığını bilin.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🏠</div>
+    <h3>Mukimlik hedefleri</h3>
+    <p>Birleşik Krallık, Portekiz ve İspanya gibi ülkelerde vergi mukimliği, oturma izni veya vatandaşlık için günleri sayın.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">📄</div>
+    <h3>Dışa aktarma</h3>
+    <p>İki dokunuşla vergi mukimliği kanıtı. Vize ve vergi evrakları için temiz bir CSV veya PDF dışa aktarın.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🗓️</div>
+    <h3>Zaman tüneli</h3>
+    <p>Ülkeye, yıla veya aya göre gruplandırılmış, seyahat seyahat tüm seyahat geçmişiniz.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🌍</div>
+    <h3>Küre</h3>
+    <p>Ziyaret ettiğiniz her ülkeyi etkileşimli bir dünya haritasında görün — seyahatleriniz bir bakışta.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">📊</div>
+    <h3>Kontrol paneli</h3>
+    <p>Her ülke ve gün görselleştirilmiş — tüm zamanların istatistikleri, en çok ziyaret edilen ülkeler, tek bir harita ve takvimde.</p>
+  </div>
+</section>
+
+<section class="section-head">
+  <h2>Varsayılan olarak akıllı</h2>
+  <p>Gün saymayı doğru — ve zahmetsiz — kılan detaylar.</p>
+</section>
+
+<section class="features compact">
+  <div class="feature">
+    <h3><span class="row"><span class="ic">📍</span> Ülkenizi otomatik algılayın</span></h3>
+    <p>PassDays, bulunduğunuz ülkeyi konumunuzdan otomatik olarak doldurur — arka planda bile, uygulama kapalıyken bile. İsteğe bağlı ve pil dostu.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🌙</span> Geceye göre say</span></h3>
+    <p>Bir yerde gerçekten uyuduğunuz geceleri sayar — çoğu vergi ve mukimlik kuralının bulunmayı tanımladığı şekilde.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🖼️</span> Fotoğraf ve CSV içe aktarma</span></h3>
+    <p>Geçmiş seyahatlerinizi fotoğraf tarihlerinden veya bir CSV dosyasından içe aktararak geçmişinizi hızlıca oluşturun.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">☁️</span> Özel iCloud senkronizasyonu</span></h3>
+    <p>İsteğe bağlı senkronizasyon, seyahatlerinizi tüm cihazlarınızda, kendi özel iCloud'unuzda tutar.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🔒</span> Cihazınızda kalır</span></h3>
+    <p>Seyahat verileriniz cihazınızda kalır. Hesap yok, oturum açma yok, reklam yok.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🌐</span> 14 dil</span></h3>
+    <p>Rusça dahil olmak üzere tamamen yerelleştirilmiş — dünya genelindeki gezginler ve taşınanlar için tasarlandı.</p>
+  </div>
+</section>
+
+<section class="section-head">
+  <h2>Bugün takip etmeye başlayın</h2>
+  <p>İndirmesi ücretsiz. Premium; sınırsız takipçi, tam analiz, dışa aktarma ve iCloud senkronizasyonunun kilidini açar.</p>
+  <p style="margin-top:24px;">
+    <a class="appstore-btn" href="https://apps.apple.com/app/id6768469440">
+      <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+      <span class="as-text">
+        <span class="as-small">İndirin:</span>
+        <span class="as-big">App Store</span>
+      </span>
+    </a>
+  </p>
+</section>
+
+<footer class="site-footer">
+  <div class="foot-links">
+    <a href="privacy">Gizlilik Politikası</a>
+    <a href="terms">Kullanım Koşulları</a>
+    <a href="support">Destek</a>
+    <a href="mailto:support@passdays.com?subject=PassDays%20Support">İletişim</a>
+  </div>
+  <p class="foot-meta">
+    © 2026 Vladislav Golovachev. Tüm hakları saklıdır.
+  </p>
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>

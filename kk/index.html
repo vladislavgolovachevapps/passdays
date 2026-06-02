@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PassDays — Елдердегі күндерді есептеуіш</title>
+<meta name="description" content="PassDays әр елде өткізген күндеріңізді есептейді және Schengen 90/180, салықтық резиденттік пен өзіндік виза шектеулерін автоматты түрде есептейді.">
+<link rel="alternate" hreflang="en" href="..">
+<link rel="alternate" hreflang="kk" href="." />
+<link rel="stylesheet" href="../style.css">
+<meta name="theme-color" content="#fdf7ee">
+<script>(function(){try{var d=localStorage.getItem("passdays_theme")==="dark";if(d)document.documentElement.setAttribute("data-theme","dark");var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",d?"#000000":"#fdf7ee");}catch(e){}})();</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href=".">
+    <img src="../appicon.png" alt="PassDays белгішесі">
+    PassDays
+  </a>
+  <span class="nav-right">
+    <span class="lang-menu" data-open="false">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Тілді өзгерту"><span class="globe">🌐</span> Қазақша <span class="chev">▾</span></button>
+      <div class="lang-pop" role="menu">
+        <a href="/" hreflang="en" data-set-lang="en">English</a>
+        <a href="/ru/" hreflang="ru" data-set-lang="ru">Русский</a>
+        <a href="/de/" hreflang="de" data-set-lang="de">Deutsch</a>
+        <a href="/es/" hreflang="es" data-set-lang="es">Español</a>
+        <a href="/fr/" hreflang="fr" data-set-lang="fr">Français</a>
+        <a href="/it/" hreflang="it" data-set-lang="it">Italiano</a>
+        <a href="/pl/" hreflang="pl" data-set-lang="pl">Polski</a>
+        <a href="/pt-BR/" hreflang="pt-BR" data-set-lang="pt-BR">Português (BR)</a>
+        <a href="/be/" hreflang="be" data-set-lang="be">Беларуская</a>
+        <a href="/uk/" hreflang="uk" data-set-lang="uk">Українська</a>
+        <a href="/ja/" hreflang="ja" data-set-lang="ja">日本語</a>
+        <a href="/ko/" hreflang="ko" data-set-lang="ko">한국어</a>
+        <a class="active" href="/kk/" hreflang="kk" data-set-lang="kk">Қазақша</a>
+        <a href="/tr/" hreflang="tr" data-set-lang="tr">Türkçe</a>
+      </div>
+    </span>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Қараңғы режимді ауыстыру" aria-pressed="false"><span class="t-moon">🌙</span><span class="t-sun">☀️</span></button>
+  </span>
+</nav>
+
+<header class="hero">
+  <img class="hero-icon" src="../appicon.png" alt="PassDays белгішесі">
+  <p class="kicker">Елдердегі күндерді есептеуіш</p>
+  <h1>PassDays</h1>
+  <p class="lede">Әр елде нақты қанша күн өткізгеніңізді біліп отырыңыз. Schengen, салықтық резиденттік және виза шектеулеріңізді кесте жасамай-ақ бақылаңыз.</p>
+</header>
+
+<section class="section-head">
+  <h2>Бақылайтын барлығыңыз — бір қолданбада</h2>
+  <p>Шашыраңқы сапарларыңызды қайда болғаныңыз бен қазіргі жағдайыңыздың айқын бейнесіне айналдыратын алты экран.</p>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <div class="ic">✈️</div>
+    <h3>Шектеулер</h3>
+    <p>Schengen 90/180, Жапония, АҚШ, Ұлыбритания және басқалары — шекке жеткенше қанша күн қалғанын біліңіз.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🏠</div>
+    <h3>Резиденттік мақсаттар</h3>
+    <p>Ұлыбритания, Португалия және Испания сияқты елдерде салықтық резиденттікке, тұруға ыхтиярхатқа немесе азаматтыққа қарай күндерді есептеңіз.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">📄</div>
+    <h3>Экспорт</h3>
+    <p>Салықтық резиденттік дәлелі екі тиюмен. Виза мен салық құжаттарына таза CSV немесе PDF экспорттаңыз.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🗓️</div>
+    <h3>Хронология</h3>
+    <p>Сапар сайын ел, жыл немесе ай бойынша топталған толық саяхат тарихыңыз.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🌍</div>
+    <h3>Глобус</h3>
+    <p>Барған әр елді интерактивті дүниежүзілік картадан көріңіз — саяхаттарыңыз бір қарағанда көрінеді.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">📊</div>
+    <h3>Бақылау тақтасы</h3>
+    <p>Әр ел мен күн көрнекі түрде — бүкіл уақыттағы статистика, үздік елдер, бір картада және күнтізбеде.</p>
+  </div>
+</section>
+
+<section class="section-head">
+  <h2>Әдепкі бойынша ақылды</h2>
+  <p>Күн есептеуді дәл әрі оңай ететін бөлшектер.</p>
+</section>
+
+<section class="features compact">
+  <div class="feature">
+    <h3><span class="row"><span class="ic">📍</span> Еліңізді автоматты анықтау</span></h3>
+    <p>PassDays орналасқан жеріңіздегі елді геолокация арқылы толтырады — тіпті фондық режимде, қолданба жабық кезде де. Қосылуды талап етеді әрі батареяны үнемдейді.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🌙</span> Түнмен есептеу</span></h3>
+    <p>Шынымен бір жерде ұйықтаған түндеріңізді есептейді — салық пен резиденттік ережелерінің көбі болуды осылай анықтайды.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🖼️</span> Фото және CSV импорты</span></h3>
+    <p>Өткен сапарларды фото күндерінен немесе CSV файлынан импорттап, тарихыңызды жылдам құрыңыз.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">☁️</span> Жеке iCloud синхрондауы</span></h3>
+    <p>Қосымша синхрондау сапарларыңызды барлық құрылғыларыңызда, өзіңіздің жеке iCloud-ыңызда сақтайды.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🔒</span> Құрылғыңызда қалады</span></h3>
+    <p>Саяхат деректеріңіз құрылғыңызда сақталады. Тіркелгі жоқ, кіру жоқ, жарнама жоқ.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🌐</span> 14 тіл</span></h3>
+    <p>Орыс тілін қоса толық локализацияланған — бүкіл әлемдегі саяхатшылар мен қоныс аударушыларға арналған.</p>
+  </div>
+</section>
+
+<section class="section-head">
+  <h2>Бүгіннен бастап бақылаңыз</h2>
+  <p>Тегін жүктеледі. Premium шектеусіз есептеуіштерді, толық аналитиканы, экспорт пен iCloud синхрондауын ашады.</p>
+  <p style="margin-top:24px;">
+    <a class="appstore-btn" href="https://apps.apple.com/app/id6768469440">
+      <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+      <span class="as-text">
+        <span class="as-small">Жүктеп алыңыз</span>
+        <span class="as-big">App Store</span>
+      </span>
+    </a>
+  </p>
+</section>
+
+<footer class="site-footer">
+  <div class="foot-links">
+    <a href="privacy">Құпиялылық саясаты</a>
+    <a href="terms">Пайдалану шарттары</a>
+    <a href="support">Қолдау</a>
+    <a href="mailto:support@passdays.com?subject=PassDays%20Support">Байланыс</a>
+  </div>
+  <p class="foot-meta">
+    © 2026 Vladislav Golovachev. Барлық құқықтар қорғалған.
+  </p>
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PassDays — Contador de días por país</title>
+<meta name="description" content="PassDays cuenta los días que pasas en cada país y calcula automáticamente el límite Schengen 90/180, la residencia fiscal y los límites de visado personalizados.">
+<link rel="alternate" hreflang="en" href="..">
+<link rel="alternate" hreflang="es" href="." />
+<link rel="stylesheet" href="../style.css">
+<meta name="theme-color" content="#fdf7ee">
+<script>(function(){try{var d=localStorage.getItem("passdays_theme")==="dark";if(d)document.documentElement.setAttribute("data-theme","dark");var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",d?"#000000":"#fdf7ee");}catch(e){}})();</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href=".">
+    <img src="../appicon.png" alt="Icono de PassDays">
+    PassDays
+  </a>
+  <span class="nav-right">
+    <span class="lang-menu" data-open="false">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Cambiar idioma"><span class="globe">🌐</span> Español <span class="chev">▾</span></button>
+      <div class="lang-pop" role="menu">
+        <a href="/" hreflang="en" data-set-lang="en">English</a>
+        <a href="/ru/" hreflang="ru" data-set-lang="ru">Русский</a>
+        <a href="/de/" hreflang="de" data-set-lang="de">Deutsch</a>
+        <a class="active" href="/es/" hreflang="es" data-set-lang="es">Español</a>
+        <a href="/fr/" hreflang="fr" data-set-lang="fr">Français</a>
+        <a href="/it/" hreflang="it" data-set-lang="it">Italiano</a>
+        <a href="/pl/" hreflang="pl" data-set-lang="pl">Polski</a>
+        <a href="/pt-BR/" hreflang="pt-BR" data-set-lang="pt-BR">Português (BR)</a>
+        <a href="/be/" hreflang="be" data-set-lang="be">Беларуская</a>
+        <a href="/uk/" hreflang="uk" data-set-lang="uk">Українська</a>
+        <a href="/ja/" hreflang="ja" data-set-lang="ja">日本語</a>
+        <a href="/ko/" hreflang="ko" data-set-lang="ko">한국어</a>
+        <a href="/kk/" hreflang="kk" data-set-lang="kk">Қазақша</a>
+        <a href="/tr/" hreflang="tr" data-set-lang="tr">Türkçe</a>
+      </div>
+    </span>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar modo oscuro" aria-pressed="false"><span class="t-moon">🌙</span><span class="t-sun">☀️</span></button>
+  </span>
+</nav>
+
+<header class="hero">
+  <img class="hero-icon" src="../appicon.png" alt="PassDays app icon">
+  <p class="kicker">Contador de días por país</p>
+  <h1>PassDays</h1>
+  <p class="lede">Sabe exactamente cuántos días has pasado en cada país. Mantén el control de tus límites Schengen, de residencia fiscal y de visado, sin hojas de cálculo.</p>
+</header>
+
+<section class="section-head">
+  <h2>Todo lo que registras, en una sola app</h2>
+  <p>Seis pantallas que convierten tus viajes dispersos en una imagen clara de dónde has estado y cuál es tu situación.</p>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <div class="ic">✈️</div>
+    <h3>Límites</h3>
+    <p>Schengen 90/180, Japón, EE. UU., el Reino Unido y más: sabe cuántos días te quedan antes de alcanzar un límite.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🏠</div>
+    <h3>Objetivos de residencia</h3>
+    <p>Cuenta los días para la residencia fiscal, un permiso de residencia o la ciudadanía en países como el Reino Unido, Portugal y España.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">📄</div>
+    <h3>Exportar</h3>
+    <p>Comprobante de residencia fiscal en dos toques. Exporta un archivo CSV o PDF claro para los trámites de visado e impuestos.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🗓️</div>
+    <h3>Cronología</h3>
+    <p>Todo tu historial de viajes, viaje a viaje, agrupado por país, año o mes.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🌍</div>
+    <h3>Globo</h3>
+    <p>Ve todos los países que has visitado en un mapamundi interactivo: tus viajes de un vistazo.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">📊</div>
+    <h3>Panel</h3>
+    <p>Cada país y día visualizados: estadísticas históricas y países principales, en un mismo mapa y calendario.</p>
+  </div>
+</section>
+
+<section class="section-head">
+  <h2>Inteligente desde el principio</h2>
+  <p>Los detalles que hacen que contar los días sea preciso y sin esfuerzo.</p>
+</section>
+
+<section class="features compact">
+  <div class="feature">
+    <h3><span class="row"><span class="ic">📍</span> Detección automática de tu país</span></h3>
+    <p>PassDays rellena el país en el que te encuentras a partir de tu ubicación, incluso en segundo plano, incluso cuando la app está cerrada. Es opcional y respetuoso con la batería.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🌙</span> Conteo por noches</span></h3>
+    <p>Cuenta las noches que realmente dormiste en un lugar, tal como la mayoría de las normas fiscales y de residencia definen la presencia.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🖼️</span> Importación de fotos y CSV</span></h3>
+    <p>Crea tu historial rápidamente importando viajes pasados a partir de las fechas de las fotos o de un archivo CSV.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">☁️</span> Sincronización privada con iCloud</span></h3>
+    <p>La sincronización opcional mantiene tus viajes en todos tus dispositivos, en tu propio iCloud privado.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🔒</span> Se queda en tu dispositivo</span></h3>
+    <p>Tus datos de viaje viven en tu dispositivo. Sin cuenta, sin inicio de sesión, sin anuncios.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🌐</span> 14 idiomas</span></h3>
+    <p>Totalmente localizada, incluido el ruso: creada para viajeros y expatriados de todo el mundo.</p>
+  </div>
+</section>
+
+<section class="section-head">
+  <h2>Empieza a registrar hoy</h2>
+  <p>Descarga gratuita. Premium desbloquea contadores ilimitados, análisis completos, exportación y sincronización con iCloud.</p>
+  <p style="margin-top:24px;">
+    <a class="appstore-btn" href="https://apps.apple.com/app/id6768469440">
+      <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+      <span class="as-text">
+        <span class="as-small">Descárgalo en el</span>
+        <span class="as-big">App Store</span>
+      </span>
+    </a>
+  </p>
+</section>
+
+<footer class="site-footer">
+  <div class="foot-links">
+    <a href="privacy">Política de privacidad</a>
+    <a href="terms">Condiciones de uso</a>
+    <a href="support">Soporte</a>
+    <a href="mailto:support@passdays.com?subject=PassDays%20Support">Contacto</a>
+  </div>
+  <p class="foot-meta">
+    © 2026 Vladislav Golovachev. Todos los derechos reservados.
+  </p>
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>

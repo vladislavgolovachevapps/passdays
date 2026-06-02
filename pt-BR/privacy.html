@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PassDays — Política de Privacidade</title>
+<link rel="alternate" hreflang="en" href="../privacy">
+<link rel="alternate" hreflang="pt-BR" href="privacy" />
+<link rel="stylesheet" href="../style.css">
+<meta name="theme-color" content="#fdf7ee">
+<script>(function(){try{var d=localStorage.getItem("passdays_theme")==="dark";if(d)document.documentElement.setAttribute("data-theme","dark");var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",d?"#000000":"#fdf7ee");}catch(e){}})();</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href=".">
+    <img src="../appicon.png" alt="Ícone do PassDays">
+    PassDays
+  </a>
+  <span class="nav-right">
+    <span class="lang-menu" data-open="false">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Mudar idioma"><span class="globe">🌐</span> Português (BR) <span class="chev">▾</span></button>
+      <div class="lang-pop" role="menu">
+        <a href="/privacy" hreflang="en" data-set-lang="en">English</a>
+        <a href="/ru/privacy" hreflang="ru" data-set-lang="ru">Русский</a>
+        <a href="/de/privacy" hreflang="de" data-set-lang="de">Deutsch</a>
+        <a href="/es/privacy" hreflang="es" data-set-lang="es">Español</a>
+        <a href="/fr/privacy" hreflang="fr" data-set-lang="fr">Français</a>
+        <a href="/it/privacy" hreflang="it" data-set-lang="it">Italiano</a>
+        <a href="/pl/privacy" hreflang="pl" data-set-lang="pl">Polski</a>
+        <a class="active" href="/pt-BR/privacy" hreflang="pt-BR" data-set-lang="pt-BR">Português (BR)</a>
+        <a href="/be/privacy" hreflang="be" data-set-lang="be">Беларуская</a>
+        <a href="/uk/privacy" hreflang="uk" data-set-lang="uk">Українська</a>
+        <a href="/ja/privacy" hreflang="ja" data-set-lang="ja">日本語</a>
+        <a href="/ko/privacy" hreflang="ko" data-set-lang="ko">한국어</a>
+        <a href="/kk/privacy" hreflang="kk" data-set-lang="kk">Қазақша</a>
+        <a href="/tr/privacy" hreflang="tr" data-set-lang="tr">Türkçe</a>
+      </div>
+    </span>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar modo escuro" aria-pressed="false"><span class="t-moon">🌙</span><span class="t-sun">☀️</span></button>
+  </span>
+</nav>
+
+<main class="content">
+
+<h1>Política de Privacidade</h1>
+<p class="meta">PassDays — última atualização: 2 de junho de 2026</p>
+
+<p>Esta política explica quais informações o PassDays ("nós" ou "o App") trata quando você usa o aplicativo, como elas são usadas e os controles que você tem. O PassDays é desenvolvido por Vladislav Golovachev como desenvolvedor individual.</p>
+
+<p>O PassDays foi projetado para manter seus dados de viagem no seu dispositivo. Não pedimos que você crie uma conta nem faça login. Não vendemos seus dados. Não exibimos anúncios dentro do aplicativo.</p>
+
+<h2>1. Informações armazenadas no seu dispositivo</h2>
+
+<p>As informações a seguir são criadas e armazenadas localmente no seu dispositivo quando você usa o App. Elas pertencem a você e não são transmitidas a nós:</p>
+
+<ul>
+  <li><strong>Viagens e histórico de viagens</strong> — países que você visita, datas de início e término, notas que você adiciona e como cada entrada foi criada (manualmente, por importação de fotos ou por detecção automática).</li>
+  <li><strong>Limites e rastreadores</strong> — regras de visto, residência e outras regras de contagem de dias que você configura.</li>
+  <li><strong>Preferências do App</strong> — o país de origem selecionado, países excluídos, dia de início da semana, tema e configurações similares dentro do app.</li>
+</ul>
+
+<h2>2. Permissões que o PassDays solicita</h2>
+
+<h3>Localização</h3>
+<p>Se você conceder acesso à localização, o PassDays usa as coordenadas GPS atuais enquanto o app está aberto para exibir o seu país atual no mapa e, se você ativar o recurso de detecção automática, para adicionar automaticamente o país de hoje ao seu registro de viagens. As coordenadas são processadas no dispositivo. Apenas o código do país inferido dessas coordenadas é salvo no seu registro de viagens — as coordenadas precisas não são armazenadas.</p>
+
+<p><strong>Localização em segundo plano (opcional, permissão "Sempre"):</strong> Se você ativar a detecção automática em segundo plano e conceder o acesso "Sempre", o PassDays usa o Significant Location Changes para manter seu calendário de viagens preciso mesmo quando o app está fechado. Assim como no uso em primeiro plano, as coordenadas são processadas no dispositivo e apenas o país é salvo — as coordenadas precisas não são armazenadas. Você pode voltar para "Ao Usar" ou desativar a localização a qualquer momento nos Ajustes do iOS.</p>
+
+<h3>Biblioteca de Fotos</h3>
+<p>Se você conceder acesso à biblioteca de fotos e iniciar uma importação de fotos, o PassDays lê a <em>data de criação</em> e as <em>coordenadas GPS</em> incorporadas aos metadados das suas fotos. As fotos em si nunca são enviadas nem copiadas. Apenas a data e o código do país inferido das coordenadas são salvos no seu registro de viagens neste dispositivo. A geocodificação reversa das coordenadas em nomes de países é realizada pelo serviço CLGeocoder da Apple, em servidores da Apple.</p>
+
+<h3>Rastreamento (App Tracking Transparency)</h3>
+<p>Na primeira execução, o iOS pergunta se você permite que o PassDays rastreie sua atividade em outros aplicativos e sites. Se você permitir, o identificador de publicidade do seu dispositivo (IDFA) poderá ser compartilhado com o Google para medir como as pessoas descobrem o App (atribuição de instalação). Se você recusar, nenhum identificador de publicidade é compartilhado. O PassDays não exibe anúncios, independentemente da sua escolha, e o App é totalmente funcional, quer você permita o rastreamento ou não.</p>
+
+<h3>Notificações</h3>
+<p>O PassDays pode enviar lembretes locais para manter seu registro de viagens atualizado. Todos os lembretes são agendados e entregues no seu dispositivo pelo iOS. Não enviamos notificações push remotas para você.</p>
+
+<h2>3. Sincronização opcional via iCloud</h2>
+
+<p>O PassDays oferece uma opção de sincronização via iCloud nos Ajustes (desativada por padrão). Quando você a ativa, suas viagens, limites e preferências são sincronizados com o seu próprio banco de dados privado do iCloud usando o CloudKit da Apple. Esses dados ficam no contêiner privado do seu Apple ID — a Apple é a operadora dos dados e o desenvolvedor do PassDays não tem acesso a eles.</p>
+
+<h2>4. Análises e diagnósticos de falhas</h2>
+
+<p>O PassDays usa dois serviços fornecidos pelo Google (Firebase) para entender como o App é usado e para detectar falhas:</p>
+
+<ul>
+  <li><strong>Firebase Analytics</strong> — coleta automaticamente eventos como a primeira execução, aberturas diárias do app, versão do app, versão do sistema operacional, modelo do dispositivo e país ou região aproximados. Isso nos ajuda a entender quantas pessoas usam o App e quais recursos são úteis. Os dados são agregados e não são usados para identificá-lo pessoalmente.
+    <p>Além dos eventos automáticos, o PassDays registra um pequeno conjunto de eventos de uso personalizados e não identificáveis — como quais telas você abre, conclusão da integração inicial, criação de um limite, importação de dados ou exportação de um arquivo — além de três sinalizadores de configuração liga/desliga (detecção automática, contar por noite, sincronização via iCloud). Eles são agregados para mostrar quais recursos são usados e não são usados para identificá-lo.</p>
+  </li>
+  <li><strong>Firebase Crashlytics</strong> — captura informações sobre falhas (stack trace, versão do SO, modelo do dispositivo, versão do app) para que os bugs possam ser corrigidos. Os relatórios de falhas não contêm suas viagens, fotos ou localização.</li>
+</ul>
+
+<p>O Google processa esses dados em nosso nome. Você pode ler a política de privacidade do Google em <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> e os detalhes sobre o tratamento de dados do Firebase em <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
+
+<p>Se você permitiu o App Tracking Transparency, seu IDFA também poderá ser compartilhado com o Google para atribuir instalações do app. Se você recusou, o IDFA nunca é compartilhado.</p>
+
+<h2>5. Assinaturas e pagamentos</h2>
+
+<p>O PassDays oferece assinaturas opcionais com renovação automática (PassDays Premium, nos planos mensal e anual). Todos os pagamentos são processados pela Apple por meio da sua conta da App Store. Não vemos nem armazenamos os detalhes do seu pagamento. A Apple compartilha conosco apenas uma verificação de compra anônima para que o App saiba se a sua assinatura está ativa.</p>
+
+<p>As assinaturas são renovadas automaticamente até você cancelar. Você pode revisar, cancelar ou alterar assinaturas a qualquer momento em <em>Ajustes → [seu Apple ID] → Assinaturas</em> no seu dispositivo.</p>
+
+<p>Para gerenciar assinaturas, exibir ofertas, validar compras e realizar experimentos de preços, o PassDays usa o Adapty, um serviço de gerenciamento de assinaturas. O Adapty recebe o status da sua compra e assinatura e um identificador anônimo gerado pelo app; ele não recebe seu nome, e-mail ou Apple ID. Veja a política de privacidade do Adapty em <a href="https://adapty.io/privacy/">adapty.io/privacy</a>.</p>
+
+<h2>6. Retenção e exclusão de dados</h2>
+
+<p>Como suas viagens, limites e preferências são armazenados no seu dispositivo (e, se ativado, no seu próprio iCloud), você pode excluí-los a qualquer momento:</p>
+
+<ul>
+  <li>Remova viagens, limites ou rastreadores individuais dentro do PassDays.</li>
+  <li>Desative a sincronização via iCloud nos ajustes do PassDays para parar de enviar novas alterações ao iCloud.</li>
+  <li>Desinstale o App para remover todos os dados armazenados localmente. Para também remover os dados sincronizados com o iCloud, abra <em>Ajustes → [seu Apple ID] → iCloud → Gerenciar Armazenamento da Conta</em> no seu dispositivo e exclua a entrada do PassDays.</li>
+  <li>Revogue qualquer permissão (Localização, Fotos, Rastreamento, Notificações) a qualquer momento em Ajustes do iOS → PassDays.</li>
+</ul>
+
+<p>Os dados de análise e de falhas coletados pelo Firebase são retidos de acordo com as configurações de retenção padrão do Google. Para solicitar a exclusão dos dados do Firebase Analytics vinculados ao seu dispositivo, entre em contato conosco pelo e-mail abaixo e trabalharemos com o Google para atender à solicitação na medida exigida pela legislação aplicável.</p>
+
+<h2>7. Seus direitos (GDPR / UK GDPR / CCPA)</h2>
+
+<p>Se você reside no Espaço Econômico Europeu, no Reino Unido, na Califórnia ou em outra jurisdição com leis de privacidade semelhantes, você tem o direito de:</p>
+
+<ul>
+  <li>Acessar os dados que mantemos sobre você;</li>
+  <li>Corrigir ou excluir esses dados;</li>
+  <li>Opor-se ao processamento ou restringi-lo;</li>
+  <li>Solicitar uma cópia dos seus dados em um formato portátil;</li>
+  <li>Retirar o consentimento para qualquer processamento baseado em consentimento (como o App Tracking).</li>
+</ul>
+
+<p>Como o PassDays não exige uma conta e a maior parte dos seus dados existe apenas no seu dispositivo, normalmente não conseguimos identificá-lo para atender a essas solicitações diretamente. Você mesmo pode exercer a maioria desses direitos por meio do seu dispositivo (excluir o App, redefinir permissões do iOS, revogar a permissão de rastreamento). Para dados de análise ou de falhas vinculados ao identificador anônimo do Firebase do seu dispositivo, entre em contato conosco e trabalharemos com o Google para cumprir a sua solicitação.</p>
+
+<p>Não vendemos informações pessoais e não compartilhamos informações pessoais com terceiros para publicidade comportamental entre contextos.</p>
+
+<h2>8. Privacidade das crianças</h2>
+
+<p>O PassDays tem classificação 4+ e pode ser usado por pessoas de qualquer idade. Ele não exige uma conta, e os dados de viagem que você cria permanecem no seu dispositivo. Não coletamos intencionalmente informações pessoais que identifiquem diretamente uma criança. Se você acredita que uma criança nos forneceu informações pessoais (por exemplo, ao nos enviar um e-mail), entre em contato conosco e tomaremos as medidas apropriadas para removê-las.</p>
+
+<h2>9. Segurança</h2>
+
+<p>Os dados armazenados no seu dispositivo são protegidos pela criptografia do sistema de arquivos do iOS quando o dispositivo está bloqueado. A comunicação com os serviços do iCloud da Apple, do CLGeocoder da Apple, do Firebase do Google e do Adapty ocorre por HTTPS usando criptografia TLS padrão.</p>
+
+<h2>10. Alterações nesta política</h2>
+
+<p>Podemos atualizar esta política de tempos em tempos. Quando o fizermos, a data de "última atualização" no topo desta página será alterada. Alterações significativas serão anunciadas em uma atualização futura do App.</p>
+
+<h2>11. Contato</h2>
+
+<p>Se você tiver dúvidas ou solicitações sobre esta política, envie um e-mail para <a href="mailto:support@passdays.com?subject=PassDays%20Support">support@passdays.com</a>.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="foot-links">
+    <a href="privacy">Política de Privacidade</a>
+    <a href="terms">Termos de Uso</a>
+    <a href="support">Suporte</a>
+    <a href="mailto:support@passdays.com?subject=PassDays%20Support">Contato</a>
+  </div>
+  <p class="foot-meta">© 2026 Vladislav Golovachev. Todos os direitos reservados.</p>
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>

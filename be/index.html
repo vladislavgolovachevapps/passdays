@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="be">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PassDays — улік дзён па краінах</title>
+<meta name="description" content="PassDays вядзе ўлік дзён, якія вы праводзіце ў кожнай краіне, і аўтаматычна разлічвае Schengen 90/180, падатковае рэзідэнцтва і ўласныя візавыя ліміты.">
+<link rel="alternate" hreflang="en" href="..">
+<link rel="alternate" hreflang="be" href="." />
+<link rel="stylesheet" href="../style.css">
+<meta name="theme-color" content="#fdf7ee">
+<script>(function(){try{var d=localStorage.getItem("passdays_theme")==="dark";if(d)document.documentElement.setAttribute("data-theme","dark");var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",d?"#000000":"#fdf7ee");}catch(e){}})();</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href=".">
+    <img src="../appicon.png" alt="Значок PassDays">
+    PassDays
+  </a>
+  <span class="nav-right">
+    <span class="lang-menu" data-open="false">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Змяніць мову"><span class="globe">🌐</span> Беларуская <span class="chev">▾</span></button>
+      <div class="lang-pop" role="menu">
+        <a href="/" hreflang="en" data-set-lang="en">English</a>
+        <a href="/ru/" hreflang="ru" data-set-lang="ru">Русский</a>
+        <a href="/de/" hreflang="de" data-set-lang="de">Deutsch</a>
+        <a href="/es/" hreflang="es" data-set-lang="es">Español</a>
+        <a href="/fr/" hreflang="fr" data-set-lang="fr">Français</a>
+        <a href="/it/" hreflang="it" data-set-lang="it">Italiano</a>
+        <a href="/pl/" hreflang="pl" data-set-lang="pl">Polski</a>
+        <a href="/pt-BR/" hreflang="pt-BR" data-set-lang="pt-BR">Português (BR)</a>
+        <a class="active" href="/be/" hreflang="be" data-set-lang="be">Беларуская</a>
+        <a href="/uk/" hreflang="uk" data-set-lang="uk">Українська</a>
+        <a href="/ja/" hreflang="ja" data-set-lang="ja">日本語</a>
+        <a href="/ko/" hreflang="ko" data-set-lang="ko">한국어</a>
+        <a href="/kk/" hreflang="kk" data-set-lang="kk">Қазақша</a>
+        <a href="/tr/" hreflang="tr" data-set-lang="tr">Türkçe</a>
+      </div>
+    </span>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Пераключыць цёмную тэму" aria-pressed="false"><span class="t-moon">🌙</span><span class="t-sun">☀️</span></button>
+  </span>
+</nav>
+
+<header class="hero">
+  <img class="hero-icon" src="../appicon.png" alt="Значок праграмы PassDays">
+  <p class="kicker">Улік дзён па краінах</p>
+  <h1>PassDays</h1>
+  <p class="lede">Дакладна ведайце, колькі дзён вы правялі ў кожнай краіне. Кантралюйце свае шэнгенскія, падатковыя і візавыя ліміты — без табліц.</p>
+</header>
+
+<section class="section-head">
+  <h2>Усё, што вы адсочваеце, у адной праграме</h2>
+  <p>Шэсць экранаў, якія ператвараюць раскіданыя паездкі ў ясную карціну таго, дзе вы былі і як ідуць вашы справы.</p>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <div class="ic">✈️</div>
+    <h3>Ліміты</h3>
+    <p>Schengen 90/180, Японія, ЗША, Вялікабрытанія і іншыя — ведайце, колькі дзён у вас засталося, перш чым вы дасягнеце ліміту.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🏠</div>
+    <h3>Мэты рэзідэнцтва</h3>
+    <p>Лічыце дні для падатковага рэзідэнцтва, віду на жыхарства ці грамадзянства ў такіх краінах, як Вялікабрытанія, Партугалія і Іспанія.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">📄</div>
+    <h3>Экспарт</h3>
+    <p>Пацвярджэнне падатковага рэзідэнцтва ў два націскі. Экспартуйце акуратны файл CSV ці PDF для візавых і падатковых дакументаў.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🗓️</div>
+    <h3>Стужка падзей</h3>
+    <p>Уся ваша гісторыя падарожжаў, паездка за паездкай, згрупаваная па краіне, годзе ці месяцы.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🌍</div>
+    <h3>Глобус</h3>
+    <p>Глядзіце кожную краіну, якую вы наведалі, на інтэрактыўнай карце свету — усе вашы падарожжы з аднаго погляду.</p>
+  </div>
+  <div class="feature">
+    <div class="ic">📊</div>
+    <h3>Панэль</h3>
+    <p>Кожная краіна і дзень у выглядзе графікі — статыстыка за ўвесь час, топ краін, на адной карце і ў календары.</p>
+  </div>
+</section>
+
+<section class="section-head">
+  <h2>Разумна па змаўчанні</h2>
+  <p>Дэталі, якія робяць улік дзён дакладным — і лёгкім.</p>
+</section>
+
+<section class="features compact">
+  <div class="feature">
+    <h3><span class="row"><span class="ic">📍</span> Аўтавызначэнне краіны</span></h3>
+    <p>PassDays запаўняе краіну, у якой вы знаходзіцеся, паводле вашага месцазнаходжання — нават у фоне, нават калі праграма закрытая. Падключаецца па жаданні і беражэ зарад акумулятара.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🌙</span> Улік па начах</span></h3>
+    <p>Лічыць ночы, якія вы сапраўды дзесьці начавалі — так, як большасць падатковых і рэзідэнцкіх правілаў вызначаюць прысутнасць.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🖼️</span> Імпарт фота і CSV</span></h3>
+    <p>Хутка стварыце сваю гісторыю, імпартаваўшы мінулыя паездкі з дат фотаздымкаў ці файла CSV.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">☁️</span> Прыватная сінхранізацыя праз iCloud</span></h3>
+    <p>Дадатковая сінхранізацыя захоўвае вашы паездкі на ўсіх вашых прыладах, у вашым уласным прыватным iCloud.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🔒</span> Застаецца на вашай прыладзе</span></h3>
+    <p>Вашы даныя пра падарожжы захоўваюцца на вашай прыладзе. Без уліковага запісу, без уваходу, без рэкламы.</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🌐</span> 14 моў</span></h3>
+    <p>Цалкам лакалізавана, у тым ліку на беларускую — створана для падарожнікаў і рэлакантаў з усяго свету.</p>
+  </div>
+</section>
+
+<section class="section-head">
+  <h2>Пачніце адсочваць сёння</h2>
+  <p>Бясплатнае спампоўванне. Premium адкрывае неабмежаваную колькасць трэкераў, поўную аналітыку, экспарт і сінхранізацыю праз iCloud.</p>
+  <p style="margin-top:24px;">
+    <a class="appstore-btn" href="https://apps.apple.com/app/id6768469440">
+      <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+      <span class="as-text">
+        <span class="as-small">Спампаваць у</span>
+        <span class="as-big">App Store</span>
+      </span>
+    </a>
+  </p>
+</section>
+
+<footer class="site-footer">
+  <div class="foot-links">
+    <a href="privacy">Палітыка прыватнасці</a>
+    <a href="terms">Умовы выкарыстання</a>
+    <a href="support">Падтрымка</a>
+    <a href="mailto:support@passdays.com?subject=PassDays%20Support">Кантакты</a>
+  </div>
+  <p class="foot-meta">
+    © 2026 Vladislav Golovachev. Усе правы абаронены.
+  </p>
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>

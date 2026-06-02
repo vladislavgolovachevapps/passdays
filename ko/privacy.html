@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PassDays — 개인정보처리방침</title>
+<link rel="alternate" hreflang="en" href="../privacy">
+<link rel="alternate" hreflang="ko" href="privacy" />
+<link rel="stylesheet" href="../style.css">
+<meta name="theme-color" content="#fdf7ee">
+<script>(function(){try{var d=localStorage.getItem("passdays_theme")==="dark";if(d)document.documentElement.setAttribute("data-theme","dark");var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",d?"#000000":"#fdf7ee");}catch(e){}})();</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href=".">
+    <img src="../appicon.png" alt="PassDays 아이콘">
+    PassDays
+  </a>
+  <span class="nav-right">
+    <span class="lang-menu" data-open="false">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="언어 변경"><span class="globe">🌐</span> 한국어 <span class="chev">▾</span></button>
+      <div class="lang-pop" role="menu">
+        <a href="/privacy" hreflang="en" data-set-lang="en">English</a>
+        <a href="/ru/privacy" hreflang="ru" data-set-lang="ru">Русский</a>
+        <a href="/de/privacy" hreflang="de" data-set-lang="de">Deutsch</a>
+        <a href="/es/privacy" hreflang="es" data-set-lang="es">Español</a>
+        <a href="/fr/privacy" hreflang="fr" data-set-lang="fr">Français</a>
+        <a href="/it/privacy" hreflang="it" data-set-lang="it">Italiano</a>
+        <a href="/pl/privacy" hreflang="pl" data-set-lang="pl">Polski</a>
+        <a href="/pt-BR/privacy" hreflang="pt-BR" data-set-lang="pt-BR">Português (BR)</a>
+        <a href="/be/privacy" hreflang="be" data-set-lang="be">Беларуская</a>
+        <a href="/uk/privacy" hreflang="uk" data-set-lang="uk">Українська</a>
+        <a href="/ja/privacy" hreflang="ja" data-set-lang="ja">日本語</a>
+        <a class="active" href="/ko/privacy" hreflang="ko" data-set-lang="ko">한국어</a>
+        <a href="/kk/privacy" hreflang="kk" data-set-lang="kk">Қазақша</a>
+        <a href="/tr/privacy" hreflang="tr" data-set-lang="tr">Türkçe</a>
+      </div>
+    </span>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="다크 모드 전환" aria-pressed="false"><span class="t-moon">🌙</span><span class="t-sun">☀️</span></button>
+  </span>
+</nav>
+
+<main class="content">
+
+<h1>개인정보처리방침</h1>
+<p class="meta">PassDays — 최종 업데이트: 2026년 6월 2일</p>
+
+<p>이 방침은 PassDays("당사", "저희" 또는 "본 앱")가 앱 사용 시 어떤 정보를 처리하는지, 그 정보가 어떻게 사용되는지, 그리고 귀하가 가진 제어 권한이 무엇인지를 설명합니다. PassDays는 Vladislav Golovachev가 개인 개발자로서 개발하였습니다.</p>
+
+<p>PassDays는 귀하의 여행 데이터를 기기에 보관하도록 설계되었습니다. 당사는 계정 생성이나 로그인을 요구하지 않습니다. 당사는 귀하의 데이터를 판매하지 않습니다. 당사는 앱 내에서 광고를 표시하지 않습니다.</p>
+
+<h2>1. 기기에 저장되는 정보</h2>
+
+<p>다음 정보는 귀하가 본 앱을 사용할 때 기기에 로컬로 생성되고 저장됩니다. 이 정보는 귀하에게 속하며 당사로 전송되지 않습니다:</p>
+
+<ul>
+  <li><strong>여행 및 여행 기록</strong> — 방문하는 국가, 시작 및 종료 날짜, 추가한 메모, 그리고 각 항목이 생성된 방식(직접 입력, 사진 가져오기, 또는 자동 감지).</li>
+  <li><strong>한도 및 추적기</strong> — 귀하가 설정한 비자, 거주 및 기타 일수 계산 규칙.</li>
+  <li><strong>앱 환경설정</strong> — 선택한 본국, 제외 국가, 주 시작 요일, 테마 및 이와 유사한 앱 내 설정.</li>
+</ul>
+
+<h2>2. PassDays가 요청하는 권한</h2>
+
+<h3>위치</h3>
+<p>위치 접근 권한을 허용하면, PassDays는 앱이 열려 있는 동안 현재 GPS 좌표를 사용하여 지도에 현재 국가를 표시하고, 자동 감지 기능을 활성화한 경우 오늘의 국가를 여행 기록에 자동으로 추가합니다. 좌표는 기기에서 처리됩니다. 해당 좌표로부터 추론된 국가 코드만 여행 기록에 저장되며 — 정확한 좌표는 저장되지 않습니다.</p>
+
+<p><strong>백그라운드 위치(선택형, "항상" 권한):</strong> 백그라운드 자동 감지를 활성화하고 "항상" 접근 권한을 허용하면, PassDays는 Significant Location Changes를 사용하여 앱이 닫혀 있을 때에도 여행 달력을 정확하게 유지합니다. 포그라운드 사용과 마찬가지로 좌표는 기기에서 처리되며 국가만 저장되고 — 정확한 좌표는 저장되지 않습니다. iOS 설정에서 언제든지 "앱을 사용하는 동안"으로 변경하거나 위치를 끌 수 있습니다.</p>
+
+<h3>사진 보관함</h3>
+<p>사진 보관함 접근 권한을 허용하고 사진 가져오기를 시작하면, PassDays는 사진의 메타데이터에 포함된 <em>생성 날짜</em>와 <em>GPS 좌표</em>를 읽습니다. 사진 자체는 절대 업로드되거나 복사되지 않습니다. 날짜와 좌표로부터 추론된 국가 코드만 이 기기의 여행 기록에 저장됩니다. 좌표를 국가명으로 변환하는 역지오코딩은 Apple 서버의 Apple CLGeocoder 서비스에서 수행됩니다.</p>
+
+<h3>추적(App Tracking Transparency)</h3>
+<p>최초 실행 시, iOS는 PassDays가 다른 앱 및 웹사이트에서의 활동을 추적하도록 허용할지 묻습니다. 허용하면 기기의 광고 식별자(IDFA)가 사람들이 본 앱을 어떻게 발견하는지 측정하기 위해(설치 기여 분석) Google과 공유될 수 있습니다. 거부하면 광고 식별자는 공유되지 않습니다. PassDays는 귀하의 선택과 관계없이 광고를 표시하지 않으며, 추적 허용 여부와 상관없이 본 앱은 완전히 작동합니다.</p>
+
+<h3>알림</h3>
+<p>PassDays는 여행 기록을 최신 상태로 유지하도록 로컬 알림을 보낼 수 있습니다. 모든 알림은 iOS에 의해 귀하의 기기에서 예약되고 전달됩니다. 당사는 원격 푸시 알림을 보내지 않습니다.</p>
+
+<h2>3. 선택형 iCloud 동기화</h2>
+
+<p>PassDays는 설정에서 iCloud 동기화 옵션을 제공합니다(기본적으로 꺼져 있음). 이를 켜면 여행 기록, 한도, 환경설정이 Apple의 CloudKit을 사용하여 귀하 본인의 비공개 iCloud 데이터베이스로 동기화됩니다. 이 데이터는 귀하의 Apple ID 비공개 컨테이너에 보관되며 — Apple이 처리자이고 PassDays 개발자는 이에 접근할 수 없습니다.</p>
+
+<h2>4. 분석 및 충돌 진단</h2>
+
+<p>PassDays는 본 앱이 어떻게 사용되는지 파악하고 충돌을 포착하기 위해 Google(Firebase)이 제공하는 두 가지 서비스를 사용합니다:</p>
+
+<ul>
+  <li><strong>Firebase Analytics</strong> — 최초 실행, 일일 앱 실행, 앱 버전, 운영 체제 버전, 기기 모델, 대략적인 국가 또는 지역과 같은 이벤트를 자동으로 수집합니다. 이는 얼마나 많은 사람이 본 앱을 사용하고 어떤 기능이 유용한지 파악하는 데 도움이 됩니다. 데이터는 집계되며 귀하를 개인적으로 식별하는 데 사용되지 않습니다.
+    <p>자동 이벤트 외에도, PassDays는 어떤 화면을 여는지, 온보딩 완료, 한도 생성, 데이터 가져오기, 파일 내보내기와 같은 소수의 맞춤형 비식별 사용 이벤트와 세 가지 켜기/끄기 설정 플래그(자동 감지, 박 단위 계산, iCloud 동기화)를 기록합니다. 이는 어떤 기능이 사용되는지 보여주기 위해 집계되며 귀하를 식별하는 데 사용되지 않습니다.</p>
+  </li>
+  <li><strong>Firebase Crashlytics</strong> — 버그를 수정할 수 있도록 충돌에 관한 정보(스택 추적, OS 버전, 기기 모델, 앱 버전)를 수집합니다. 충돌 보고서에는 귀하의 여행 기록, 사진 또는 위치가 포함되지 않습니다.</li>
+</ul>
+
+<p>Google은 당사를 대신하여 이 데이터를 처리합니다. Google의 개인정보처리방침은 <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>에서, Firebase의 데이터 처리 세부 정보는 <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>에서 확인할 수 있습니다.</p>
+
+<p>App Tracking Transparency를 허용한 경우, 앱 설치를 기여 분석하기 위해 귀하의 IDFA가 Google과 공유될 수도 있습니다. 거부한 경우 IDFA는 절대 공유되지 않습니다.</p>
+
+<h2>5. 구독 및 결제</h2>
+
+<p>PassDays는 선택형 자동 갱신 구독(PassDays Premium, 월간 및 연간 등급)을 제공합니다. 모든 결제는 귀하의 App Store 계정을 통해 Apple이 처리합니다. 당사는 귀하의 결제 정보를 보거나 저장하지 않습니다. Apple은 본 앱이 귀하의 구독이 활성 상태인지 알 수 있도록 익명의 구매 확인 정보만 당사와 공유합니다.</p>
+
+<p>구독은 취소할 때까지 자동으로 갱신됩니다. 기기에서 <em>설정 → [내 Apple ID] → 구독</em>을 통해 언제든지 구독을 확인, 취소 또는 변경할 수 있습니다.</p>
+
+<p>구독을 관리하고, 혜택을 표시하며, 구매를 검증하고, 가격 실험을 실행하기 위해 PassDays는 구독 관리 서비스인 Adapty를 사용합니다. Adapty는 귀하의 구매 및 구독 상태와 앱이 생성한 익명 식별자를 수신하며, 귀하의 이름, 이메일 또는 Apple ID는 수신하지 않습니다. Adapty의 개인정보처리방침은 <a href="https://adapty.io/privacy/">adapty.io/privacy</a>에서 확인하세요.</p>
+
+<h2>6. 데이터 보관 및 삭제</h2>
+
+<p>귀하의 여행 기록, 한도, 환경설정은 기기에(그리고 활성화한 경우 본인의 iCloud에) 저장되므로, 언제든지 직접 삭제할 수 있습니다:</p>
+
+<ul>
+  <li>PassDays 내에서 개별 여행, 한도 또는 추적기를 삭제하세요.</li>
+  <li>iCloud로 추가 변경 사항이 전송되지 않도록 PassDays 설정에서 iCloud 동기화를 끄세요.</li>
+  <li>로컬에 저장된 모든 데이터를 삭제하려면 본 앱을 제거하세요. iCloud로 동기화된 데이터도 삭제하려면 기기에서 <em>설정 → [내 Apple ID] → iCloud → 계정 저장 공간 관리</em>를 열어 PassDays 항목을 삭제하세요.</li>
+  <li>iOS 설정 → PassDays에서 언제든지 모든 권한(위치, 사진, 추적, 알림)을 철회할 수 있습니다.</li>
+</ul>
+
+<p>Firebase가 수집한 분석 및 충돌 데이터는 Google의 기본 보관 설정에 따라 보관됩니다. 귀하의 기기에 연결된 Firebase Analytics 데이터의 삭제를 요청하려면 아래 이메일로 당사에 문의해 주시면, 당사는 관련 법률이 요구하는 범위 내에서 요청을 이행하기 위해 Google과 협력하겠습니다.</p>
+
+<h2>7. 귀하의 권리(GDPR / UK GDPR / CCPA)</h2>
+
+<p>유럽 경제 지역, 영국, 캘리포니아 또는 이와 유사한 개인정보 보호법이 적용되는 다른 관할권에 거주하는 경우, 귀하는 다음과 같은 권리를 가집니다:</p>
+
+<ul>
+  <li>당사가 보유한 귀하에 관한 데이터에 접근할 권리;</li>
+  <li>해당 데이터를 정정하거나 삭제할 권리;</li>
+  <li>그 처리에 이의를 제기하거나 처리를 제한할 권리;</li>
+  <li>이동 가능한 형식으로 데이터 사본을 요청할 권리;</li>
+  <li>동의에 기반한 모든 처리(예: App Tracking)에 대한 동의를 철회할 권리.</li>
+</ul>
+
+<p>PassDays는 계정을 요구하지 않으며 귀하의 데이터 대부분은 기기에만 존재하므로, 당사는 일반적으로 이러한 요청을 직접 이행하기 위해 귀하를 식별할 수 없습니다. 귀하는 이러한 권리의 대부분을 기기를 통해 직접 행사할 수 있습니다(본 앱 삭제, iOS 권한 재설정, 추적 권한 철회). 귀하의 기기의 익명 Firebase 식별자에 연결된 분석 또는 충돌 데이터에 대해서는 당사에 문의해 주시면 요청을 준수하기 위해 Google과 협력하겠습니다.</p>
+
+<p>당사는 개인정보를 판매하지 않으며, 교차 맥락 행동 광고를 위해 제3자와 개인정보를 공유하지 않습니다.</p>
+
+<h2>8. 아동의 개인정보</h2>
+
+<p>PassDays는 4+ 등급이며 모든 연령대의 사용자가 이용할 수 있습니다. 본 앱은 계정을 요구하지 않으며, 귀하가 생성하는 여행 데이터는 기기에 보관됩니다. 당사는 아동을 직접 식별할 수 있는 개인정보를 고의로 수집하지 않습니다. 아동이 당사에 개인정보를 제공했다고 생각되는 경우(예: 당사에 이메일을 보낸 경우), 당사에 문의해 주시면 이를 삭제하기 위한 적절한 조치를 취하겠습니다.</p>
+
+<h2>9. 보안</h2>
+
+<p>기기에 저장된 데이터는 기기가 잠겨 있을 때 iOS 파일 시스템 암호화로 보호됩니다. Apple의 iCloud, Apple의 CLGeocoder, Google의 Firebase 및 Adapty 서비스와의 통신은 표준 TLS 암호화를 사용하여 HTTPS를 통해 이루어집니다.</p>
+
+<h2>10. 본 방침의 변경</h2>
+
+<p>당사는 본 방침을 수시로 업데이트할 수 있습니다. 업데이트 시 이 페이지 상단의 "최종 업데이트" 날짜가 변경됩니다. 중요한 변경 사항은 향후 앱 업데이트에서 공지됩니다.</p>
+
+<h2>11. 문의</h2>
+
+<p>본 방침에 관한 질문이나 요청이 있으시면 <a href="mailto:support@passdays.com?subject=PassDays%20Support">support@passdays.com</a>으로 이메일을 보내 주세요.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="foot-links">
+    <a href="privacy">개인정보처리방침</a>
+    <a href="terms">이용약관</a>
+    <a href="support">고객 지원</a>
+    <a href="mailto:support@passdays.com?subject=PassDays%20Support">문의하기</a>
+  </div>
+  <p class="foot-meta">© 2026 Vladislav Golovachev. 모든 권리 보유.</p>
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>

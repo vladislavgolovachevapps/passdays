@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PassDays — 国別滞在日数トラッカー</title>
+<meta name="description" content="PassDaysは各国での滞在日数を記録し、Schengen 90/180、税務上の居住者判定、カスタムのビザ上限を自動で計算します。">
+<link rel="alternate" hreflang="en" href="..">
+<link rel="alternate" hreflang="ja" href="." />
+<link rel="stylesheet" href="../style.css">
+<meta name="theme-color" content="#fdf7ee">
+<script>(function(){try{var d=localStorage.getItem("passdays_theme")==="dark";if(d)document.documentElement.setAttribute("data-theme","dark");var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",d?"#000000":"#fdf7ee");}catch(e){}})();</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href=".">
+    <img src="../appicon.png" alt="PassDdays アイコン">
+    PassDays
+  </a>
+  <span class="nav-right">
+    <span class="lang-menu" data-open="false">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="言語を変更"><span class="globe">🌐</span> 日本語 <span class="chev">▾</span></button>
+      <div class="lang-pop" role="menu">
+        <a href="/" hreflang="en" data-set-lang="en">English</a>
+        <a href="/ru/" hreflang="ru" data-set-lang="ru">Русский</a>
+        <a href="/de/" hreflang="de" data-set-lang="de">Deutsch</a>
+        <a href="/es/" hreflang="es" data-set-lang="es">Español</a>
+        <a href="/fr/" hreflang="fr" data-set-lang="fr">Français</a>
+        <a href="/it/" hreflang="it" data-set-lang="it">Italiano</a>
+        <a href="/pl/" hreflang="pl" data-set-lang="pl">Polski</a>
+        <a href="/pt-BR/" hreflang="pt-BR" data-set-lang="pt-BR">Português (BR)</a>
+        <a href="/be/" hreflang="be" data-set-lang="be">Беларуская</a>
+        <a href="/uk/" hreflang="uk" data-set-lang="uk">Українська</a>
+        <a class="active" href="/ja/" hreflang="ja" data-set-lang="ja">日本語</a>
+        <a href="/ko/" hreflang="ko" data-set-lang="ko">한국어</a>
+        <a href="/kk/" hreflang="kk" data-set-lang="kk">Қазақша</a>
+        <a href="/tr/" hreflang="tr" data-set-lang="tr">Türkçe</a>
+      </div>
+    </span>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="ダークモードを切り替え" aria-pressed="false"><span class="t-moon">🌙</span><span class="t-sun">☀️</span></button>
+  </span>
+</nav>
+
+<header class="hero">
+  <img class="hero-icon" src="../appicon.png" alt="PassDays app icon">
+  <p class="kicker">国別滞在日数トラッカー</p>
+  <h1>PassDays</h1>
+  <p class="lede">各国で過ごした日数を正確に把握できます。Schengen、税務上の居住者、ビザの各上限を、表計算ソフトなしでしっかり管理しましょう。</p>
+</header>
+
+<section class="section-head">
+  <h2>記録したいことを、すべて1つのアプリで</h2>
+  <p>バラバラの旅行記録を、これまで訪れた場所と現在の状況がひと目でわかる形に変える6つの画面。</p>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <div class="ic">✈️</div>
+    <h3>上限</h3>
+    <p>Schengen 90/180、日本、アメリカ、イギリスなど、上限に達するまであと何日残っているかがわかります。</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🏠</div>
+    <h3>居住の目標</h3>
+    <p>イギリス、ポルトガル、スペインなどの国で、税務上の居住者、居住許可、または市民権の取得に向けた日数をカウントします。</p>
+  </div>
+  <div class="feature">
+    <div class="ic">📄</div>
+    <h3>エクスポート</h3>
+    <p>税務上の居住を証明する資料も2タップで。ビザや税務の手続き用に、すっきりとしたCSVまたはPDFをエクスポートできます。</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🗓️</div>
+    <h3>タイムライン</h3>
+    <p>すべての旅行履歴を旅行ごとに表示し、国・年・月でまとめて確認できます。</p>
+  </div>
+  <div class="feature">
+    <div class="ic">🌍</div>
+    <h3>地球儀</h3>
+    <p>訪れたすべての国をインタラクティブな世界地図で表示。旅の足跡をひと目で確認できます。</p>
+  </div>
+  <div class="feature">
+    <div class="ic">📊</div>
+    <h3>ダッシュボード</h3>
+    <p>すべての国と日数を可視化。累計の統計やよく訪れる国を、1つの地図とカレンダーにまとめて表示します。</p>
+  </div>
+</section>
+
+<section class="section-head">
+  <h2>はじめからスマート</h2>
+  <p>日数のカウントを正確に、そして手間なくする細やかな工夫。</p>
+</section>
+
+<section class="features compact">
+  <div class="feature">
+    <h3><span class="row"><span class="ic">📍</span> 滞在国を自動検出</span></h3>
+    <p>PassDaysは現在地から滞在中の国を自動で入力します。バックグラウンドでも、アプリを閉じているときでも動作します。オプトイン式で、バッテリーにも優しい設計です。</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🌙</span> 泊数でカウント</span></h3>
+    <p>実際に宿泊した夜の数をカウントします。多くの税務・居住に関するルールが定める滞在の数え方に合わせています。</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🖼️</span> 写真・CSVインポート</span></h3>
+    <p>写真の日付やCSVファイルから過去の旅行を取り込み、履歴をすばやく作成できます。</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">☁️</span> プライベートなiCloud同期</span></h3>
+    <p>オプションの同期機能で、あなた専用のプライベートなiCloudを使い、すべてのデバイスで旅行記録を共有できます。</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🔒</span> データはデバイス内に</span></h3>
+    <p>旅行データはあなたのデバイス内に保存されます。アカウント不要、サインイン不要、広告なし。</p>
+  </div>
+  <div class="feature">
+    <h3><span class="row"><span class="ic">🌐</span> 14言語対応</span></h3>
+    <p>日本語を含め、完全にローカライズ済み。世界中の旅行者や移住者のために作られています。</p>
+  </div>
+</section>
+
+<section class="section-head">
+  <h2>今日から記録を始めましょう</h2>
+  <p>ダウンロードは無料。Premiumなら、無制限のトラッカー、すべての分析機能、エクスポート、iCloud同期をご利用いただけます。</p>
+  <p style="margin-top:24px;">
+    <a class="appstore-btn" href="https://apps.apple.com/app/id6768469440">
+      <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+      <span class="as-text">
+        <span class="as-small">ダウンロード</span>
+        <span class="as-big">App Store</span>
+      </span>
+    </a>
+  </p>
+</section>
+
+<footer class="site-footer">
+  <div class="foot-links">
+    <a href="privacy">プライバシーポリシー</a>
+    <a href="terms">利用規約</a>
+    <a href="support">サポート</a>
+    <a href="mailto:support@passdays.com?subject=PassDays%20Support">お問い合わせ</a>
+  </div>
+  <p class="foot-meta">
+    © 2026 Vladislav Golovachev. 無断複写・転載を禁じます。
+  </p>
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>
